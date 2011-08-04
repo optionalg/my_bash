@@ -19,6 +19,9 @@ SCM_NONE_CHAR='○'
 RVM_THEME_PROMPT_PREFIX=' |'
 RVM_THEME_PROMPT_SUFFIX='|'
 
+VIRTUAL_ENV_PROMPT_PREFIX=''
+VIRTUAL_ENV_PROMPT_SUFFIX=''
+
 function scm {
   if [[ -d .git ]]; then SCM=$GIT
   elif [[ -d .hg ]]; then SCM=$HG
@@ -88,5 +91,21 @@ function rvm_version_prompt {
   if which rvm &> /dev/null; then
     rvm=$(rvm tools identifier) || return
     echo -e "$RVM_THEME_PROMPT_PREFIX$rvm$RVM_THEME_PROMPT_SUFFIX"
+  fi
+}
+
+function virtual_env_prompt {
+  if [ -n "$VIRTUAL_ENV" ] ; then
+    name=$(basename $VIRTUAL_ENV) || return 
+    echo -e "$VIRTUAL_ENV_PROMPT_PREFIX$name$VIRTUAL_ENV_PROMPT_SUFFIX"
+  fi
+}
+
+function update_prompt {
+  if [[ $BASH_THEME ]]; then
+    source "$BASH/themes/$BASH_THEME/$BASH_THEME.theme.bash"
+    if [[ $PROMPT ]]; then
+        export PS1=$PROMPT
+    fi
   fi
 }
