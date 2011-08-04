@@ -7,7 +7,7 @@ export VISUAL=/opt/local/bin/vim
 export PATH=~/.gem/ruby/1.8/bin:$PATH
 
 # add MacTex path
-export PATH=/usr/texbin:$PATH
+export PATH=/usr/local/bin:/usr/texbin:$PATH
 
 # Set PATH so it includes user's private bin if it exists
  if [ -d ~/mytools ] ; then

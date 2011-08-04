@@ -5,7 +5,9 @@ if [ $(uname) = "Darwin" ]; then
   export JAVA_HOME='/Library/Java/Home'
 
   # make macports in higher priority
-  export PATH=/opt/local/bin:$PATH
+  [ -e '/opt/local/bin' ] && export PATH=/opt/local/bin:$PATH
+  
+  [ -e '/opt/local/man' ] && export MANPATH=/opt/local/man:$MANPATH
 
   # ALIAS
   alias gitx='/Applications/GitX.app/Contents/MacOS/GitX >/dev/null 2>&1'
