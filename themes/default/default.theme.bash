@@ -4,13 +4,13 @@ SCM_THEME_PROMPT_CLEAN=" ${bold_green}✓"
 SCM_THEME_PROMPT_PREFIX="("
 SCM_THEME_PROMPT_SUFFIX=")"
 
-RVM_THEME_PROMPT_PREFIX=' |rb:'
+RVM_THEME_PROMPT_PREFIX='|rb:'
 RVM_THEME_PROMPT_SUFFIX='|'
-VIRTUAL_ENV_PROMPT_PREFIX='|py:'
+VIRTUAL_ENV_PROMPT_PREFIX='py:'
 VIRTUAL_ENV_PROMPT_SUFFIX='|'
 
 PROMPT="
-\[$green\]\u@\h \[$yellow\]\w\[$normal\] \[$green\]\$(scm_prompt_info) \[$yellow\]$(virtual_env_prompt)\[$yellow\]$(rvm_version_prompt)\[$normal\] [\[$red\]\A\[$normal\]]
+\[$green\]\u@\h \[$yellow\]\w\[$normal\] \[$green\]\$(scm_prompt_info) \[$yellow\]$(rvm_version_prompt)\[$yellow\]$(virtual_env_prompt)\[$normal\] [\[$red\]\A\[$normal\]]
 \[$background_white\][\!]\[$normal\] $ "
 
 #PROMPT='
