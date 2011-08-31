@@ -60,6 +60,22 @@ function git_prompt_info {
   echo -e "$prefix${ref#refs/heads/}$suffix"
 }
 
+function hg_prompt_info() {
+  ## COMMENTTED OUT, it is really slow
+  ##if [[ -n $(hg status 2> /dev/null) ]]; then
+    ##state=${HG_THEME_PROMPT_DIRTY:-$SCM_THEME_PROMPT_DIRTY}
+  ##else
+    ##state=${HG_THEME_PROMPT_CLEAN:-$SCM_THEME_PROMPT_CLEAN}
+  ##fi
+  ##prefix=${HG_THEME_PROMPT_PREFIX:-$SCM_THEME_PROMPT_PREFIX}
+  ##suffix=${HG_THEME_PROMPT_SUFFIX:-$SCM_THEME_PROMPT_SUFFIX}
+  ##branch=$(hg summary 2> /dev/null | grep branch | awk '{print $2}')
+  ##changeset=$(hg summary 2> /dev/null | grep parent | awk '{print $2}')
+
+  ##echo -e "$prefix$branch:${changeset#*:}$state$suffix"
+  echo -e ""
+}
+
 #function git_prompt_info {
   #if [[ -n $(git status -s 2> /dev/null |grep -v ^# |grep -v "working directory clean") ]]; then
       #state=${GIT_THEME_PROMPT_DIRTY:-$SCM_THEME_PROMPT_DIRTY}
