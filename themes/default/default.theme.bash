@@ -10,7 +10,7 @@ VIRTUAL_ENV_PROMPT_PREFIX='py:'
 VIRTUAL_ENV_PROMPT_SUFFIX='|'
 
 PROMPT="
-\[$green\]\u@\h \[$yellow\]\w\[$normal\] \[$green\]\$(scm_prompt_info) \[$yellow\]$(rvm_version_prompt)\[$yellow\]$(virtual_env_prompt)\[$normal\] [\[$red\]\A\[$normal\]]
+\[$green\]\u@\h \[$yellow\]\w\[$normal\] \[$green\]\$(scm_prompt_info) \[$yellow\]\$(rvm_version_prompt)\[$yellow\]\$(virtual_env_prompt)\[$normal\] [\[$red\]\A\[$normal\]]
 \[$background_white\][\!]\[$normal\] $ "
 
 #PROMPT='
