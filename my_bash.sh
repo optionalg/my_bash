@@ -52,6 +52,15 @@ do
   source $config_file
 done
 
+# Load some local scripts that may be different machine by machine 
+# so, should not be stored in to vcs
+CUSTOM="${BASH}/local/*.bash"
+for local_file in $CUSTOM
+do
+  source $local_file
+done
+
+
 
 unset config_file
 if [[ $PROMPT ]]; then

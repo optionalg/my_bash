@@ -26,3 +26,4 @@ private/
 *.swf
 *.zip
 FILES.txt
+local/
