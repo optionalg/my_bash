@@ -10,6 +10,10 @@ export PATH=~/.gem/ruby/1.8/bin:$PATH
 export PATH=/usr/local/bin:/usr/texbin:$PATH
 
 # Set PATH so it includes user's private bin if it exists
+ if [ -d ~/tools ] ; then
+   PATH=${PATH}:$HOME/tools
+ fi
+
  if [ -d ~/mytools ] ; then
    PATH=${PATH}:$HOME/mytools
  fi

@@ -193,7 +193,7 @@ function ding()
    fi
 }
 
-g() { growlnotify -s --image ~/Desktop/mylogo.png -n "ShellNotification" -m "$*" "Notification" 2>/dev/null; }
+g() { growlnotify -s --image ~/Desktop/mylogo.png -n "ShellNotification" -m "${*:-Done}" "Notification" 2>/dev/null; }
 #gm() { echo "Remote Notification" | mail -s "$* on $(hostname)" vincent@seravia.com }
 
 function v()
