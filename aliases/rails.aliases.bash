@@ -11,9 +11,9 @@ alias rp='rails plugin'
 alias ra='rails application'
 alias rd='rails destroy'
 
-alias ss='script/server'
+alias ss='rails server'
 alias ts="thin start"     # thin server
-alias sc='script/console'
+alias sc='rails console'
 alias restartapp='touch tmp/restart.txt'
 alias restart='touch tmp/restart.txt'  # restart passenger
 alias devlog='tail -f log/development.log'
