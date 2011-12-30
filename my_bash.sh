@@ -19,7 +19,7 @@ done
 
 # Tab Completion
 ## Load system bash completion first
-for config_file in  /etc/bash_completion /opt/local/etc/bash_completion
+for config_file in  /etc/bash_completion 
 do
   [ -e "$config_file" ] && source $config_file
 done

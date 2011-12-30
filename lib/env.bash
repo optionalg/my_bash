@@ -1,7 +1,7 @@
 #!/bin/bash
 
-export EDITOR=/opt/local/bin/vim
-export VISUAL=/opt/local/bin/vim
+export EDITOR=/usr/local/bin/vim
+export VISUAL=/usr/local/bin/vim
 
 # add ruby gems bin folder into path 
 export PATH=~/.gem/ruby/1.8/bin:$PATH
