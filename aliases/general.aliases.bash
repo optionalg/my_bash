@@ -58,6 +58,7 @@ alias dos2unix="sed -e 's/.$//'"
 alias unix2dos="sed -e 's/$/\r/'"
 
 alias webshare='python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"' 
+alias scpresume="rsync --partial --progress --rsh=ssh"
 
 function aliases-help() {
   echo "Generic Alias Usage"
