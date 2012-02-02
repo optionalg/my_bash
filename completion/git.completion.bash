@@ -415,7 +415,7 @@ __git_complete_remote_or_refspec ()
 	local cmd="${COMP_WORDS[1]}"
 	local cur="${COMP_WORDS[COMP_CWORD]}"
 	local i c=2 remote="" pfx="" lhs=1 no_complete_refspec=0
-	while [ $c -lt $COMP_CWORD ]; do
+	while [[ $c -lt $COMP_CWORD ]]; do
 		i="${COMP_WORDS[c]}"
 		case "$i" in
 		--all|--mirror) [ "$cmd" = "push" ] && no_complete_refspec=1 ;;
@@ -629,7 +629,7 @@ __git_find_on_cmdline ()
 {
 	local word subcommand c=1
 
-	while [ $c -lt $COMP_CWORD ]; do
+	while [[ $c -lt $COMP_CWORD ]]; do
 		word="${COMP_WORDS[c]}"
 		for subcommand in $1; do
 			if [ "$subcommand" = "$word" ]; then
@@ -644,7 +644,7 @@ __git_find_on_cmdline ()
 __git_has_doubledash ()
 {
 	local c=1
-	while [ $c -lt $COMP_CWORD ]; do
+	while [[ $c -lt $COMP_CWORD ]]; do
 		if [ "--" = "${COMP_WORDS[c]}" ]; then
 			return 0
 		fi
@@ -764,7 +764,7 @@ _git_branch ()
 {
 	local i c=1 only_local_ref="n" has_r="n"
 
-	while [ $c -lt $COMP_CWORD ]; do
+	while [[ $c -lt $COMP_CWORD ]]; do
 		i="${COMP_WORDS[c]}"
 		case "$i" in
 		-d|-m)	only_local_ref="y" ;;
@@ -2064,7 +2064,7 @@ _git_svn ()
 _git_tag ()
 {
 	local i c=1 f=0
-	while [ $c -lt $COMP_CWORD ]; do
+	while [[ $c -lt $COMP_CWORD ]]; do
 		i="${COMP_WORDS[c]}"
 		case "$i" in
 		-d|-v)
@@ -2099,7 +2099,7 @@ _git ()
 {
 	local i c=1 command __git_dir
 
-	while [ $c -lt $COMP_CWORD ]; do
+	while [[ $c -lt $COMP_CWORD ]]; do
 		i="${COMP_WORDS[c]}"
 		case "$i" in
 		--git-dir=*) __git_dir="${i#--git-dir=}" ;;
