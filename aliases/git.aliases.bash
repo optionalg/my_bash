@@ -16,6 +16,7 @@ alias gc='git checkout'
 alias gm='git commit -m'
 alias gma='git commit -am'
 alias gd='git diff --color'
+alias gdc='git diff --color --cached'
 alias gs='git status'
 alias gra='git remote add'
 alias grr='git remote rm'
@@ -35,6 +36,6 @@ complete -o bashdefault -o default -o nospace -F _git_branch gbr gb 2>/dev/null 
 	|| complete -o default -o nospace -F _git_branch gbr gb
 complete -o bashdefault -o default -o nospace -F _git_log glg gl 2>/dev/null \
 	|| complete -o default -o nospace -F _git_log glg gl
-complete -o bashdefault -o default -o nospace -F _git_diff gdiff gd 2>/dev/null \
-	|| complete -o default -o nospace -F _git_diff gdiff gd
+complete -o bashdefault -o default -o nospace -F _git_diff gdiff gd gdc 2>/dev/null \
+	|| complete -o default -o nospace -F _git_diff gdiff gd gdc
 
