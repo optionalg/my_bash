@@ -1,10 +1,15 @@
 #!/bin/bash
 
-export EDITOR=/usr/local/bin/vim
-export VISUAL=/usr/local/bin/vim
+if [ -e /usr/local/bin/vim ]; then
+  export EDITOR=/usr/local/bin/vim
+fi
+
+if [ -e /usr/local/bin/vim ]; then
+  export VISUAL=/usr/local/bin/vim
+fi
 
 # add ruby gems bin folder into path 
-export PATH=~/.gem/ruby/1.8/bin:$PATH
+export PATH=~/.gem/ruby/1.8/bin:$PATH:/usr/local/sbin
 
 # add MacTex path
 export PATH=/usr/local/bin:/usr/texbin:$PATH
