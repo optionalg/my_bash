@@ -7,7 +7,7 @@
 
 [ -f /opt/local/sbin/bitlbee ] && /opt/local/sbin/bitlbee -c $HOME/.bitlbee/bitlbee.conf 
   
-[ -f /opt/local/bin/esd ] && /opt/local/bin/esd >/dev/null 2>&1 &
+[ -f /opt/local/bin/esd ] && /opt/local/bin/esd >/dev/null 2>&1
 
 [ -d "/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin" ] && export PATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
 
